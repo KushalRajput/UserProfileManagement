@@ -1,0 +1,66 @@
+<section class="login-block">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <form class="md-float-material form-material" [formGroup]="login">
+                    <div class="auth-box card">
+                        <div class="card-block">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 class="text-center heading">Create your new account. It’s free and only takes a minute</h3>
+                                </div>
+                            </div>
+                            <div class="form-group form-primary">
+                                <input type="text" class="form-control" name="name" placeholder="Name"
+                                    formControlName='name' value="" id="name">
+                                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.name.errors.required">Name is required.</div>
+                                </div>
+                            </div>
+                            <div class="form-group form-primary">
+                                <input type="text" class="form-control" name="email" value="" placeholder="Email"
+                                    formControlName='email' id="email">
+                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.email.errors.required">Email is required.</div>
+                                    <div *ngIf="submitted && f.email.errors.email">Email is not valid.</div>
+                                </div>
+                            </div>
+                            <div class="form-group form-primary">
+                                <input type="password" class="form-control" name="password" placeholder="Password"
+                                    formControlName='password' value="" id="password">
+                                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                    <div *ngIf="submitted && f.password.errors.required">Password is required.</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <button type="submit" (click)='submit()'
+                                        class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20"> Log In
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="or-container">
+                                <div class="line-separator"></div>
+                                <div class="or-label">or</div>
+                                <div class="line-separator"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" (click)='signInWithFB()'> <a
+                                    class="btn btn-lg btn-google btn-block text-uppercase btn-outline mb-2" ><img style="width: 15px;"
+                                        src="assets/FB.png"> Login Using
+                                    Facebook</a> </div> <br>
+                                <div class="col-md-12" (click)='signInWithGoogle()'> <a
+                                        class="btn btn-lg btn-google btn-block text-uppercase btn-outline"><img
+                                            src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using
+                                        Google</a> </div>
+                            </div> <br>
+                            <p class="text-inverse text-center">Already have an account? <a routerLink="/"
+                                    data-abc="true">Log In</a></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
