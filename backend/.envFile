@@ -1,0 +1,3 @@
+DB_URL=mongodb+srv://admin:ZYskkHxVKKVxp2V8@cluster0.swq0x.mongodb.net/UserProfileManagement?retryWrites=true&w=majority
+SECRET_KEY=neosofttechnologies
+PORT=3000

@@ -1,6 +1,6 @@
 step 1. Open backend directory and run npm i,
 
-step 2. change the name of .env_sample to .env 
+step 2. change the name of .envFile to .env 
 
 To start server run in backend directory -> npm start 
 
